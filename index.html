@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Huéspedes</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Cantidad de personas</th>
+      <th>Estándar</th>
+      <th>Premium</th>
+    </tr>
+    <tr>
+      <td>1 - 2</td>
+      <td>20.000</td>
+      <td>35.000</td>
+    </tr>
+    <tr>
+      <td>3 - 4</td>
+      <td>30.000</td>
+      <td>52.000</td>
+    </tr>
+    <tr>
+      <td>5 - 7</td>
+      <td>35.000</td>
+      <td>61.000</td>
+
+    </tr>
+  </table>
+  <div class="formulario">
+    <input type="text" placeholder="Nombre del Huésped" id="nombreHuesped">
+    <input type="number" placeholder="Cantidad de personas" id="cantidadPersonas">
+    <div>
+      Tipo de habitacion <br>
+      Estándar<input type="radio" name="tipoHabitacion" id="tipoHabitacionE" value="estandar" checked> <br>
+      Premium<input type="radio" name="tipoHabitacion" id="tipoHabitacionP" value="premium">
+    </div>
+    <input type="number" placeholder="Cantidad de dias" id="cantidadDias">
+    <div id="Huespedes"></div>
+    <button onclick="registroHuesped()">Registrar Huésped</button>
+    <button onclick="limpiar()">Limpiar registro</button>
+    <div id="Huéspedes"></div>
+  </div>
+
+
+
+  <div class="error">
+    <div id="errorNombre"></div>
+    <div id="errorNumeroNoValido"></div>
+    <div id="errorCantidadDias"></div>
+  </div>
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>
