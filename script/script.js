@@ -12,8 +12,8 @@ let calidadHabitacion = tipoHabitacion()
 
 function validarEntradas() {
   let nombre = document.getElementById('nombreHuesped').value
-  let cantidadPersonas = parseInt(document.getElementById('cantidadPersonas').value)
-  let cantidadDias = parseInt(document.getElementById("cantidadDias").value)
+  let cantidadPersonas = document.getElementById('cantidadPersonas').value
+  let cantidadDias = document.getElementById("cantidadDias").value
 
   document.getElementById('errorNombre').textContent = ''
   document.getElementById('errorNumeroNoValido').textContent = ''
@@ -30,7 +30,7 @@ function validarEntradas() {
     document.getElementById('errorNumeroNoValido').textContent = "Debe ingresar entre 1 y 7 personas."
     error = true
   }
-  if (cantidadDias.toString().trim() === '' || cantidadDias === 0) {
+  if (cantidadDias.trim() === '' || cantidadDias === 0) {
     document.getElementById("errorCantidadDias").textContent = "Error: Ingrese un valor válido."
     error = true
   }
